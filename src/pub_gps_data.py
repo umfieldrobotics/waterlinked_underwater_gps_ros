@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import rospy
 import requests
 from sensor_msgs.msg import NavSatFix, NavSatStatus
@@ -51,7 +53,7 @@ def ugps_publisher(base_url):
 
 if __name__ == "__main__":
     rospy.init_node("waterlinked_underwater_gps_node")
-    base_url = rospy.get_param("~base_url", "https://demo.waterlinked.com")
+    base_url = rospy.get_param("~base_url", "http://192.168.2.94")
     try:
         ugps_publisher(base_url)
     except rospy.ROSInterruptException:
