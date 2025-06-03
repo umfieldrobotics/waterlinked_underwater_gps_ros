@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(waterlinked_underwater_gps_node)
+project(waterlinked_ugps_driver)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
@@ -212,7 +212,7 @@ include_directories(
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
 
-catkin_install_python(PROGRAMS scripts/pub_gps_data.py
+catkin_install_python(PROGRAMS src/waterlinked_ugps_publisher.py
 	DESTINATION $(CATKIN_PACKAGE_BIN_DESTINATION)
 )
 
